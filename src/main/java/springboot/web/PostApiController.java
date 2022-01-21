@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import springboot.service.PostsService;
-import springboot.web.dto.PostsListResponseDto;
 import springboot.web.dto.PostsResponseDto;
 import springboot.web.dto.PostsSaveRequestDto;
 import springboot.web.dto.PostsUpdateRequestDto;
 
-import java.util.List;
 
 @RequiredArgsConstructor
 @RestController

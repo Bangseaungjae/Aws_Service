@@ -16,6 +16,7 @@ repositories {
 // for Junit 5
 test { // (2)
     useJUnitPlatform()
+    failFast = true
 }
 
 dependencies {

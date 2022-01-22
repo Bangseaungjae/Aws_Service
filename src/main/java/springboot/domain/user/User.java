@@ -5,17 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import springboot.domain.BaseTimeEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity
+@Table(name = "USERS")
 public class User extends BaseTimeEntity {
 
     @Id

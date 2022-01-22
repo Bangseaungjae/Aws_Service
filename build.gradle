@@ -6,7 +6,7 @@ plugins { // (1)
 
 group 'Aws_Service'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
-sourceCompatibility = 1.8
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()

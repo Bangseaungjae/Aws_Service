@@ -37,7 +37,7 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
-    local_dir: deploy # 해당 위치의 파일들만 s3로 이동
+    local_dir: deploy # 해당 위치의 파일들만 s3로 이동g
     wait-until-deployed: true
 
   - provider: codedeploy

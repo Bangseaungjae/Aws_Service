@@ -26,17 +26,17 @@ script: "./gradlew clean build"
 #  - - cd ../ && mkdir -p deploy # 상위 디렉토리로 이동후 deploy 디렉토리 생성
 #  - mv before-deploy/before-deploy.zip deploy/AwsService2.zip # deploy로 zip파일 이동
 
-#deploy:
-#  - provider: s3
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    bucket: awsservice-build
-#    region: ap-northeast-2
-#    skip_cleanup: true
-#    acl: private
-#    local_dir: deploy # 해당 위치의 파일들만 s3로 이동
-#    wait-until-deployed: true
-#
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: awsservice-build
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
+    local_dir: deploy # 해당 위치의 파일들만 s3로 이동
+    wait-until-deployed: true
+
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY

@@ -17,7 +17,10 @@ cache:
 
 script: "./gradlew clean build"
 
-#before_deploy:
+before_deploy:
+  - zip -r Aws_Service *
+  - mkdir -p deploy
+  - mv Aws_Service.zip deploy/Aws_Service.zip
 #  - mkdir -p before-deploy # zip에 포함시킬 파일들을담을 디렉토리 생성
 #  - cp scripts/*.sh before-deploy/
 #  - cp appspec.yml before-deploy/
@@ -41,7 +44,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: awsservice-build
-    key: AwsService2.zip #빌드 파일을 앞축해서 전달
+    key: Aws_Service.zip #빌드 파일을 앞축해서 전달
     bundle_type: zip
     application: AwsService # 웹 콘솔에서 등록한 애플리케이션
     deployment_group: AwsService-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹

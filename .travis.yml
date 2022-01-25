@@ -27,7 +27,7 @@ before_deploy:
   - mv before-deploy/before-deploy.zip deploy/Aws_Service.zip # deploy로 zip파일 이동e
     #  - zip -r Aws_Service *
     #  - mkdir -p deploy
-    #  - mv Aws_Service.zip deploy/Aws_Service.zip.
+    #  - mv Aws_Service.zip deploy/Aws_Service.zip
 
 deploy:
   - provider: s3

@@ -6,8 +6,9 @@ branches:
   only:
     - master
 
-#before_install:
-#  - chmod +x gradlew
+before_install:
+  - chmod +x gradlew
+  - chmod +x deploy.sh
 
 #Travis CI 서버의 Homee
 cache:
